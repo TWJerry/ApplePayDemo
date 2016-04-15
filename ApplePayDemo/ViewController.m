@@ -58,13 +58,13 @@
         
         PKPaymentRequest *request = [[PKPaymentRequest alloc] init];
         
-        PKPaymentSummaryItem *widget1 = [PKPaymentSummaryItem summaryItemWithLabel:@"显示1"
+        PKPaymentSummaryItem *widget1 = [PKPaymentSummaryItem summaryItemWithLabel:@"widget11"
                                                                             amount:[NSDecimalNumber decimalNumberWithString:@"0.99"]];
         
-        PKPaymentSummaryItem *widget2 = [PKPaymentSummaryItem summaryItemWithLabel:@"显示2"
+        PKPaymentSummaryItem *widget2 = [PKPaymentSummaryItem summaryItemWithLabel:@"widget22"
                                                                             amount:[NSDecimalNumber decimalNumberWithString:@"1.00"]];
         
-        PKPaymentSummaryItem *total = [PKPaymentSummaryItem summaryItemWithLabel:@"显示3"
+        PKPaymentSummaryItem *total = [PKPaymentSummaryItem summaryItemWithLabel:@"total"
                                                                           amount:[NSDecimalNumber decimalNumberWithString:@"1.99"]];
         
         request.paymentSummaryItems = @[widget1, widget2, total];
@@ -123,7 +123,7 @@
         }
         
     } else {
-        NSLog(@"This device cannot make payments");
+        NSLog(@"无法完成支付");
     }
 }
 
